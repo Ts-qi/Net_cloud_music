@@ -1,0 +1,19 @@
+
+@value constants: '../../../../styles/constants.module.css';
+@value headerHeight, paddingLeft_20 from constants;
+
+.navBar {
+  display: flex;
+  align-items: center;
+  line-height: headerHeight;
+  padding-left: paddingLeft_20;
+}
+.routeItem {
+  margin-right: 10px;
+  cursor: pointer;
+  color: grey;
+
+  &:hover {
+    color: black;
+  }
+}

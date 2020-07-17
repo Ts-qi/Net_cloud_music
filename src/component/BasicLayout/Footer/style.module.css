@@ -1,0 +1,17 @@
+  
+  @value constants: '../../../styles/constants.module.css';
+  @value sidebarWidth, headerHeight, footerHeight from constants;
+  
+  .Footer {
+    width: 100%;
+    min-width: bodyMinWidth;
+    height: footerHeight;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    border-top: 2px solid rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 10;
+  }

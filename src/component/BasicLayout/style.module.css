@@ -1,0 +1,17 @@
+
+  
+  @value constants: '../../styles/constants.module.css';
+  @value sidebarWidth, headerHeight, footerHeight from constants;
+  
+.content {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.children {
+  width: calc(100% - sidebarWidth);
+  height: calc(100% - headerHeight - footerHeight); 
+  margin-top: headerHeight;
+  margin-bottom: footerHeight;
+  overflow: scroll;
+}

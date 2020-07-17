@@ -1,0 +1,24 @@
+@value constants: '../../../styles/constants.module.css';
+@value sidebarWidth, headerHeight, bodyMinWidth , headerImgWidth from constants;
+
+
+.rootHeader {
+  width: 100%;
+  min-width: bodyMinWidth;
+  height: headerHeight;
+  background-color: rgba(248, 248, 248, 0.95);
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+.left {
+  width: sidebarWidth;
+  height: 100%;
+}
+.musicLogo {
+  line-height: headerHeight;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(255, 115, 0);
+}

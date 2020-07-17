@@ -1,0 +1,10 @@
+  
+  @value constants: '../../../styles/constants.module.css';
+  @value sidebarWidth, headerHeight, footerHeight from constants;
+  
+  .SiderBar {
+    width: sidebarWidth;
+    height: calc(100% - footerHeight);
+    padding-top: headerHeight;
+    background-color: #eaeaea;
+  }
