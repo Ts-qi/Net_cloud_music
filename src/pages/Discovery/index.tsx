@@ -2,11 +2,14 @@ import React , { lazy,Suspense, Component} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Routes from '../../config/routes'
 import styles from './style.module.css'
-interface IDiscoveryProps {
-
-}
+interface IDiscoveryProps {}
+/**
+ * 
+ */
 const RECOMMENDATION = lazy( ()=> import('./Recommendation'))
 const SONGLIST = lazy( ()=> import('./SongList'));
+
+
 const Discovery :React.FC<IDiscoveryProps> = props => {
   return(
     <div className={ styles.Discovery}>
