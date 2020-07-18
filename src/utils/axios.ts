@@ -1,6 +1,6 @@
-import musicAxios ,{ AxiosRequestConfig,ResponseType } from 'axios';
-// import { message } from 'antd';
+import musicAxios ,{ ResponseType } from 'axios';
 import { SERVER } from '../config/server'
+import { message } from 'antd';
 
 const TIME_OUT = 40000;
 const DATA_JSON: IDictionary<ResponseType> = {
@@ -14,13 +14,10 @@ const axios = musicAxios.create({
 // 成功处理
 const handleSuccessResponse = (res: any): any => {
     console.log(res,'res-----')
-    if(res.status === 200) {
-      return res.data
-    }
+    return res.data.code === 200 ? res.data : message.error(res.data.msg )
 };
 // 错误处理
 const handleError = (error: any):any => {
-  console.log(error,'res-----')
   const { response, message } = error
   return Promise.reject(response ? new Error(response.data.message || message) : error)
 };

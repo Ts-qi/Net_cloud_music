@@ -6,7 +6,9 @@ interface IRecommendationProps {
 
 const Recommendation :React.FC<IRecommendationProps> = props => {
   return(
-    <div className={ styles.Recommendation}>Recommendation</div>
+    <div className={ styles.Recommendation}>
+      asd
+    </div>
   )
 };
 export default Recommendation;

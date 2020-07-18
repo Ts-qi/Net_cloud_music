@@ -8,3 +8,10 @@
     padding-top: headerHeight;
     background-color: #eaeaea;
   }
+  .avatar {
+    margin: 20px 10px 0 20px;
+    cursor: pointer;
+  }
+  .avatar  notLogin{
+    margin-left: 20px;
+  }
