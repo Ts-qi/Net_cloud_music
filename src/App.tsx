@@ -1,5 +1,5 @@
 import React , { lazy ,Suspense } from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import BasicLayOut from '../src/component/BasicLayout';
 import Routes from './config/routes'
 

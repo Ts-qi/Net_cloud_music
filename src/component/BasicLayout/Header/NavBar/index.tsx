@@ -16,6 +16,10 @@ const NavBarRoute : INavBarRouteProps[] = [
     label: '歌单',
     url:Route.SONGLIST
   },
+  {
+    label: '最新音乐',
+    url:Route.LATESTMUSIC
+  }
 ]
 
 const NavBar : React.FC<INavBarProps> = props => {
@@ -26,18 +30,16 @@ const NavBar : React.FC<INavBarProps> = props => {
   // 点击路由
   const handleRouteUrl = useCallback((url:string)=> {
     console.log(url)
-    
     history.push(url)
-  },[]);
-  // 是否点击 
-  const isClickMatchRoute = NavBarRoute.find(({ url }) => url === pathname)
-   
+  },[history]);
+  // 是否点击  进行匹配
+  const hasClickMatchRoute = NavBarRoute.find(({ url }) => url === pathname)
    
   return (
     <div className={styles.navBar}>
       {
         NavBarRoute && NavBarRoute.map( ({label,url},index)  => {
-          const isActive = isClickMatchRoute ?  url == pathname : index == 0 ;
+          const isActive = hasClickMatchRoute ?  url === pathname : index === 0 ;
           return (
             <div
               key={label}

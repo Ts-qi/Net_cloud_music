@@ -9,13 +9,13 @@
   padding-left: paddingLeft_20;
 }
 .routeItem {
-  margin-right: 10px;
+  margin-right: 30px;
   cursor: pointer;
   color: grey;
-
-  &:hover {
-    color: black;
-  }
+  
+}
+.routeItem:hover {
+  color: black;
 }
 .active {
   color: black;
